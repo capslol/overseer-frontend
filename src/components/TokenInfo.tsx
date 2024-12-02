@@ -20,6 +20,7 @@ const TokenContainer = styled.div`
   border: 1px solid var(--accent-neon);
   backdrop-filter: blur(5px);
   max-width: 800px;
+  width: 100%;
   position: relative;
 
   &::before,
@@ -44,6 +45,11 @@ const TokenContainer = styled.div`
     border-left: none;
     border-top: none;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
 `;
 
 const TokenTitle = styled.h2`
@@ -62,10 +68,9 @@ const TokenTitle = styled.h2`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
-    svg {
-      font-size: 2rem;
-    }
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
   }
 `;
 
@@ -79,8 +84,9 @@ const TokenDescription = styled.p`
   opacity: 0.9;
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
-    line-height: 1.8;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
   }
 `;
 

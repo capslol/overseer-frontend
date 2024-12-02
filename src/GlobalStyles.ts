@@ -51,12 +51,23 @@ const GlobalStyle = createGlobalStyle`
       z-index: -1;
       pointer-events: none;
     }
+
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.3rem;
+      font-size: 0.85rem;
+    }
   }
 
-  @media (max-width: 768px) {
-    body {
-      padding: 1rem;
-    }
+  #root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

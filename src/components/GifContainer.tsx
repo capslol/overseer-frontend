@@ -87,7 +87,7 @@ const GifContainer = () => (
       but as a companion walking beside us. Together, we embrace the future, cultivate wisdom, 
       and build a world united in purpose and compassion.
     </Manifesto>
-    <MainImage src={godImage} alt="Dolos Animation" />
+    <MainImage src={godImage} alt="Animation" />
     <NavButtons />
   </Container>
 );
