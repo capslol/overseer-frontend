@@ -6,7 +6,7 @@ const scrollReveal = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
-const CodexContainer = styled.section`
+const CodexContainer = styled.section.attrs({ id: 'luminal-codex' })`
   position: relative;
   margin: 6rem auto;
   padding: 4rem;

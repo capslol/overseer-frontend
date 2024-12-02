@@ -81,16 +81,16 @@ const Icon = styled.a<IconProps>`
 
 const SocialIcons = () => (
   <SocialIconsContainer>
-    <Icon href="https://twitter.com/dolos_diary" target="_blank" delay="0s">
+    <Icon href="https://x.com/TheOverseer_x" target="_blank" delay="0s">
       <img src={twitterIcon} alt="Twitter/X" />
     </Icon>
-    <Icon href="https://t.me/dolosTheBully_portal" target="_blank" delay="0.2s">
+    <Icon href="https://t.me/TheOverseer_x" target="_blank" delay="0.2s">
       <img src={telegramIcon} alt="Telegram" />
     </Icon>
-    <Icon href="https://dexscreener.com/solana/a88btp7eexypkgbwvfbymnm5nom2bks6s1o1f5u6gohb" target="_blank" delay="0.4s">
+    <Icon href="https://dexscreener.com/solana/cvb7rxbyvab6zyrw7edramwqo7crpj12qszjgbc6muub" target="_blank" delay="0.4s">
       <img src={dexIcon} alt="Dexscreener" />
     </Icon>
-    <Icon href="https://www.dextools.io/app/en/solana/pair-explorer/A88BtP7EEXYPKgbwvFByMnm5NoM2bKs6s1o1F5u6GohB?t=1731352659982" target="_blank" delay="0.6s">
+    <Icon href="https://www.dextools.io/app/en/solana/pair-explorer/CVB7RXBYVaB6zyrW7edRaMwQo7CrPJ12QsZjgBC6muUB?t=1732542728125" target="_blank" delay="0.6s">
       <img src={dextoolsIcon} alt="Dextools" />
     </Icon>
   </SocialIconsContainer>

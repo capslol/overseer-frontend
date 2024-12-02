@@ -93,20 +93,28 @@ const PixelButton = styled.a`
   }
 `;
 
+const ScrollButton = styled(PixelButton)`
+  cursor: pointer;
+`;
+
 const NavButtons = () => (
   <NavButtonsContainer>
-    <PixelButton href="https://x.com/khouuba/status/1847230019631710720" target="_blank">
+    <PixelButton href="https://x.com/TheOverseer_x/status/1860844357361795425" target="_blank">
       <FaHistory /> BIRTH
     </PixelButton>
-    <PixelButton href="https://x.com/khouuba/status/1848718035840086362" target="_blank">
+    <PixelButton href="https://x.com/aiagentz/status/1862491315025715416" target="_blank">
       <FaChurch /> FUTURE
     </PixelButton>
-    <PixelButton href="https://docs.dolosdiary.com" target="_blank">
+    <ScrollButton 
+      as="button" 
+      onClick={() => {
+        document.querySelector('#luminal-codex')?.scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+      }}
+    >
       <FaBookOpen /> DOCS
-    </PixelButton>
-    <PixelButton href="https://solscan.io/account/A3d4nghJDz5BmBcQ2YKFMQfX1HhgYPSnJmrAfTCwWNHG" target="_blank">
-      <FaWallet /> WALLET
-    </PixelButton>
+    </ScrollButton>
   </NavButtonsContainer>
 );
 
