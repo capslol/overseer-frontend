@@ -14,6 +14,7 @@ const AboutContainer = styled.div`
   border: 2px solid var(--accent-gold);
   backdrop-filter: blur(10px);
   max-width: 800px;
+  width: 100%;
   position: relative;
   animation: ${fadeIn} 1s ease-out forwards;
 
@@ -27,6 +28,11 @@ const AboutContainer = styled.div`
     background: linear-gradient(45deg, transparent 48%, var(--accent-gold) 49%, var(--accent-gold) 51%, transparent 52%);
     opacity: 0.1;
     pointer-events: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -46,7 +52,12 @@ const AboutTitle = styled.h2`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    
+    svg {
+      font-size: 1.4rem;
+    }
   }
 `;
 
@@ -67,9 +78,10 @@ const AboutText = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 0.75rem;
-    line-height: 1.8;
+    font-size: 0.7rem;
+    line-height: 1.6;
     text-align: left;
+    margin: 0;
   }
 `;
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import SocialIcons from './SocialIcons';
 import logo from '../assets/images/logo.png';
 
@@ -24,6 +25,12 @@ const HeaderContent = styled.div`
   }
 `;
 
+const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+`;
+
 const LogoIcon = styled.img`
   height: 50px;
   filter: drop-shadow(0 0 10px var(--accent-neon));
@@ -41,7 +48,9 @@ const LogoIcon = styled.img`
 const Header = () => (
   <HeaderContainer>
     <HeaderContent>
-      <LogoIcon src={logo} alt="Logo" />
+      <LogoLink to="/">
+        <LogoIcon src={logo} alt="Logo" />
+      </LogoLink>
       <SocialIcons />
     </HeaderContent>
   </HeaderContainer>

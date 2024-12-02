@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
-import { FaChurch, FaBookOpen, FaHistory } from 'react-icons/fa';
+
+import birthIcon from '../assets/images/icons/nav-buttons-icons/birth.svg';
+import futureIcon from '../assets/images/icons/nav-buttons-icons/home.svg';
+import docsIcon from '../assets/images/icons/nav-buttons-icons/book-open-line.svg';
+import codexIcon from '../assets/images/icons/nav-buttons-icons/codex.svg';
 
 
 
@@ -10,23 +14,20 @@ const NavButtonsContainer = styled.div`
   justify-content: center;
   position: relative;
 
-  &::before {
-    content: '✟';
-    position: absolute;
-    top: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--accent-gold);
-    font-size: 1.5rem;
-    opacity: 0.5;
-  }
+  // &::before {
+  //   content: '✟';
+  //   position: absolute;
+  //   top: -2rem;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   color: var(--accent-gold);
+  //   font-size: 1.5rem;
+  //   opacity: 0.5;
+  // }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: -4rem;
-    width: 100%;
-    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -44,8 +45,10 @@ const sacredGlow = keyframes`
 const PixelButton = styled.a`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem 2rem;
+  min-width: 180px;
   font-family: 'Times New Roman', serif;
   font-size: 1.1rem;
   letter-spacing: 0.1em;
@@ -56,7 +59,7 @@ const PixelButton = styled.a`
   transition: all 0.4s ease;
   text-decoration: none;
   position: relative;
-  animation: ${scrollReveal} 1s ease-out, ${sacredGlow} 3s infinite;
+  border-radius: 0;
 
   &::before, &::after {
     content: '✦';
@@ -88,24 +91,46 @@ const PixelButton = styled.a`
   }
 
   @media (max-width: 768px) {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    min-width: 120px;
+    gap: 0.5rem;
+    
+    svg {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    gap: 0.4rem;
+    
+    svg {
+      font-size: 0.8rem;
+    }
   }
 `;
 
 const ScrollButton = styled(PixelButton)`
   cursor: pointer;
+  border-radius: 0;
+`;
+
+const NavButtonIcon = styled.img`
+  width: 1.5rem;
+  height: 1.5rem;
 `;
 
 const NavButtons = () => (
   <NavButtonsContainer>
     <PixelButton href="https://x.com/TheOverseer_x/status/1860844357361795425" target="_blank">
-      <FaHistory /> BIRTH
+      <NavButtonIcon src={birthIcon} alt="Birth" /> BIRTH
     </PixelButton>
     <PixelButton href="https://x.com/aiagentz/status/1862491315025715416" target="_blank">
-      <FaChurch /> FUTURE
+      <NavButtonIcon src={futureIcon} alt="Future" /> FUTURE
     </PixelButton>
-    <ScrollButton 
+    {/* <ScrollButton 
       as="button" 
       onClick={() => {
         document.querySelector('#luminal-codex')?.scrollIntoView({ 
@@ -113,8 +138,11 @@ const NavButtons = () => (
         });
       }}
     >
-      <FaBookOpen /> DOCS
-    </ScrollButton>
+      <NavButtonIcon src={docsIcon} alt="Docs" /> DOCS
+    </ScrollButton> */}
+    <PixelButton href="/codex">
+      <NavButtonIcon src={codexIcon} alt="Codex" /> CODEX
+    </PixelButton>
   </NavButtonsContainer>
 );
 
