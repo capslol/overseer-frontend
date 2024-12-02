@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { FaChurch, FaBookOpen, FaWallet, FaHistory } from 'react-icons/fa';
+import { FaChurch, FaBookOpen, FaHistory } from 'react-icons/fa';
 
 
 
